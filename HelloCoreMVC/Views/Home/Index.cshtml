@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Home Index";
+}
+
+<h1>แบบ ViewBag</h1>
+<table border="=1">
+    <tr>
+        <th>รหัสลูกค้า</th>
+        <th>ชื่อ-สกุล</th>
+        <th>ที่อยู่</th>
+    </tr>
+    <tbody>
+        @foreach (var item in ViewBag.AllCustomer)
+        {
+            <tr>
+                <td>
+                    @item.CustomerID
+                </td>
+                <td>
+                    @item.FullName
+                </td>
+                <td>
+                    @item.Address
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

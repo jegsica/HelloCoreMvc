@@ -1,0 +1,64 @@
+﻿@using HelloCoreMVC.Models;
+@{
+    ViewData["Title"] = "ByViewData";
+
+    IEnumerable<Customer> customers = ViewData["AllCustomer"] as IEnumerable<Customer>;
+    IEnumerable<Product> products = ViewData["AllProduct"] as IEnumerable<Product>;
+}
+
+
+<h1>แบบ ViewData - Customer</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>รหัสลูกค้า</th>
+            <th>ชื่อ-สกุล</th>
+            <th>ที่อยู่</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in customers)
+        {
+            <tr>
+                <td>
+                    @item.CustomerID
+                </td>
+                <td>
+                    @item.FullName
+                </td>
+                <td>
+                    @item.Address
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<h1>แบบ ViewModel - Product</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>รหัสสินค้า</th>
+            <th>ชื่อสินค้า</th>
+            <th>ราคา</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in products)
+        {
+            <tr>
+                <td>
+                    @item.ProductId
+                </td>
+                <td>
+                    @item.ProductName
+                </td>
+                <td>
+                    @item.ProductPrice
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
