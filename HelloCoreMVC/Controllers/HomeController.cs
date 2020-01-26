@@ -46,6 +46,7 @@ namespace HelloCoreMVC.Controllers
             CustomerList.Add(new Customer { CustomerID = "0001", FullName = "Test1 Test1", Address = "17/21 Modiz Ratchada32" });
             CustomerList.Add(new Customer { CustomerID = "0002", FullName = "Test1 Test2", Address = "18/21 Modiz Ratchada32" });
             CustomerList.Add(new Customer { CustomerID = "0003", FullName = "Test1 Test3", Address = "19/21 Modiz Ratchada32" });
+            CustomerList.Add(new Customer { CustomerID = "0004", FullName = "Test1 Test4", Address = "20/21 Modiz Ratchada32" });
             return CustomerList;
         }
 

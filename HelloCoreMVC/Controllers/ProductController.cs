@@ -26,5 +26,6 @@ namespace HelloCoreMVC.Controllers
             p.ProductPrice = 299;
             return View(p);
         }
+
     }
 }
